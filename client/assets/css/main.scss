@@ -1,0 +1,112 @@
+
+body {
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    overflow-y: scroll;
+    color: $primary-light-blue;
+    background-color: #fafafe;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: $primary-dark-blue;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+
+    &:hover {
+        color: unset;
+    }
+}
+ul {
+    li {
+        list-style: none;
+    }
+}
+
+// Buttons
+.button-primary, .button-secondary.category-active {
+    padding: 0.75rem 2.75rem;
+    border: 1px solid transparent;
+    border-radius: 80px;
+    background-color: $primary-orange;
+    box-shadow: 0 6px 16px 0 rgba(254, 134, 48, 0.28);
+    -webkit-transition: box-shadow 300ms ease, background-color 300ms ease, -webkit-transform 300ms ease;
+    transition: box-shadow 300ms ease, background-color 300ms ease, -webkit-transform 300ms ease;
+    transition: transform 300ms ease, box-shadow 300ms ease, background-color 300ms ease;
+    transition: transform 300ms ease, box-shadow 300ms ease, background-color 300ms ease, -webkit-transform 300ms ease;
+    color: #fff;
+    line-height: 1.2em;
+    font-weight: 700;
+    text-align: center;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.button-primary:hover, .button-secondary.category-active:hover {
+    box-shadow: 0 6px 20px 5px rgba(254, 134, 48, 0.28);
+    -webkit-transform: scale3d(1.05, 1.05, 0.01);
+    transform: scale3d(1.05, 1.05, 0.01);
+    color: #fff;
+}
+
+.button-secondary {
+    padding: 0.75rem 2.75rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f7f7f7;
+    border-radius: 80px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(254, 134, 48, 0.08);
+    -webkit-transition: box-shadow 300ms ease, color 300ms ease, background-color 300ms ease, -webkit-transform 300ms ease;
+    transition: box-shadow 300ms ease, color 300ms ease, background-color 300ms ease, -webkit-transform 300ms ease;
+    transition: transform 300ms ease, box-shadow 300ms ease, color 300ms ease, background-color 300ms ease;
+    transition: transform 300ms ease, box-shadow 300ms ease, color 300ms ease, background-color 300ms ease, -webkit-transform 300ms ease;
+    color: #161412;
+    line-height: 20px;
+    text-align: center;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+  
+.button-secondary:hover {
+    background-color: $primary-orange;
+    box-shadow: 0 4px 10px 10px rgba(254, 134, 48, 0.1);
+    -webkit-transform: scale3d(1.02, 1.02, 0.01);
+    transform: scale3d(1.02, 1.02, 0.01);
+    color: #fff;
+}
+  
+
+
+
+// Page transition animation
+
+.page-enter-from {
+    transform: translateX(-100%);
+}
+
+.page-leave-to {
+    transform: translateX(100%)
+}
+.page-enter-active, .page-leave-active  {
+    transition: transform 0.2s;
+}
+
+// menutype page transition
+
+// page transition
+.fade-enter-active {
+    transition: all 0.3s ease-out;
+  }
+
+.fade-enter-from {
+    opacity: 0;
+    transform: translateY(10px);
+}
+.fade-leave-to {
+    opacity: 1;
+}

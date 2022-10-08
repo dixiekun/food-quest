@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menu_types",
+  "info": {
+    "singularName": "menu-type",
+    "pluralName": "menu-types",
+    "displayName": "menuType",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "menuImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "menu_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::menu-item.menu-item",
+      "mappedBy": "menu_type"
+    }
+  }
+}

@@ -8,8 +8,8 @@
         <ul class="category-list">
         
             <li v-for="category in foods" :key="category.name" class="category-item">
-                <NuxtLink :href="`/menutypes/${category.name}`">
-                    <img :src="`${category.image.url}`" :alt="category.name">
+                <NuxtLink :to="`/menutypes/${category.name}`">
+                    <img :src="`.${category.image.url}`" :alt="category.name">
                     <div class="category-card-text">
                         <h3>{{category.name}}</h3>
                         <p>{{category.description}}</p>

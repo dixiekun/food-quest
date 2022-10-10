@@ -11,11 +11,11 @@
 
 
     const categories = reactive([
-        'All',
-        'Breakfast',
-        'Main Dish',
-        'Drinks',
-        'Desserts'
+        'all',
+        'breakfast',
+        'main-dish',
+        'drinks',
+        'desserts'
     ])
 
 
@@ -25,16 +25,16 @@
 
     <div class="text-center flex flex-col items-center w-full">
         <div class="w-full" v-for="category in foods" :key="category.name">
-            <div v-if="category.name == name">
+            <div v-if="category.pageSlug == name">
                 <Hero :heroTitle="category.name" :heroDescription="category.description" />
                 <div class="list-menu-types flex gap-4 justify-center flex-wrap w-full">
                     <NuxtLink 
                     v-for="categ in categories" 
                     :key="categ"
-                    class="button-secondary"
+                    class="button-secondary text-capitalize"
                     :class="name === categ && 'category-active'"
                     :to="`${categ}`" 
-                    >{{categ}}</NuxtLink>
+                    >{{categ.replace(/-/g, ' ')}}</NuxtLink>
                 </div>
                 <Transition name="fade" mode="out-in">
                     <div class="item-list">
@@ -56,15 +56,15 @@
             </div>
         </div>
         <div class="w-full" v-if="categories[0] == name">
-            <Hero :heroTitle="categories[0]" heroDescription="All our available delicious food" />
+            <Hero class="all-foods" :heroTitle="categories[0]" heroDescription="All our available delicious food" />
             <div class="list-menu-types flex gap-4 justify-center flex-wrap w-full">
                 <NuxtLink 
                 v-for="categ in categories" 
                 :key="categ"
-                class="button-secondary"
+                class="button-secondary text-capitalize"
                 :class="name === categ && 'category-active'"
                 :to="`${categ}`" 
-                >{{categ}}</NuxtLink>
+                >{{categ.replace(/-/g, ' ')}}</NuxtLink>
             </div>
             <div class="item-list">
                 <div v-for="category in foods" class="item-card-container" >
@@ -88,7 +88,6 @@
     </div>
 </template>
 <style scoped lang="scss">
-
     .item-list {
         display: flex;
         gap: 2rem;

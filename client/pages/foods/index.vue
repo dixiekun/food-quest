@@ -1,3 +1,3 @@
 <script setup>
-    await navigateTo('/menutypes/All')
+    await navigateTo('/menutypes/all')
 </script>

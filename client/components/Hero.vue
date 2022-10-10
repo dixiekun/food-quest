@@ -27,4 +27,10 @@
         }
     }
 
+    .all-foods {
+        h1 {
+            text-transform: capitalize;
+        }
+    }
+
 </style>

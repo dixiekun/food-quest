@@ -39,7 +39,7 @@
                 <Transition name="fade" mode="out-in">
                     <div class="item-list">
                         <div v-for="food in category.items" class="item-card" :key="food.name">
-                            <NuxtLink :to="`/foods/${food.name}`">
+                            <NuxtLink :to="`/foods/${food.pageSlug}`">
                                 <div class="image-container">
                                     <img :src="`${food.image.url}`" 
                                     :alt="food.name"/>
@@ -69,7 +69,7 @@
             <div class="item-list">
                 <div v-for="category in foods" class="item-card-container" >
                     <div v-for="food in category.items" :key="category.name" class="item-card">
-                        <NuxtLink :to="`/foods/${food.name}`">
+                        <NuxtLink :to="`/foods/${food.pageSlug}`">
                             <div class="image-container">
                                 <img :src="`${food.image.url}`" 
                                 :alt="food.name"/>

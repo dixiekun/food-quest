@@ -10,7 +10,7 @@
     <div>
         <div  v-for="category in foods" :key="category.name">
             <div v-for="food in category.items">
-                <div v-if="food.name === routeName">
+                <div v-if="food.pageSlug === routeName">
                     <article class="item-showcase flex justify-between">
                         <div class="content-text flex flex-col gap-4">
                             <h1>{{food.name}}</h1>

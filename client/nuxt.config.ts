@@ -1,5 +1,6 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  target: 'static',
   app: {
     head: {
       title: 'Food Quest',
@@ -23,9 +24,6 @@ export default defineNuxtConfig({
       ]
     }
   },
- 
-  target: 'static',
-  fallback: true,
 
   vite: {
     css: {

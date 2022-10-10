@@ -26,6 +26,9 @@ export default defineNuxtConfig({
  
   target: 'static',
   fallback: true,
+  experimental: {
+    payloadExtraction: false,
+  },
 
   vite: {
     css: {

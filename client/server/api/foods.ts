@@ -5,7 +5,7 @@ const apps = getApps()
 
 if (!apps.length) {
     initializeApp({
-        credential: cert('./food-quest-a9d91-firebase-adminsdk-l1tzm-4f1378e303.json')
+        credential: cert('./serviceAccountKey.json')
     })
 }
 

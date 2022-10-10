@@ -11,7 +11,7 @@ export default defineNuxtConfig({
         { rel: 'preconnect', href: "https://app.snipcart.com" },
         { rel: 'preconnect', href: "https://cdn.snipcart.com" },
         { rel: 'stylesheet', href: "https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css" },
-        { rel: 'icon', href: '/assets/images/favicon.svg' },
+        { rel: 'icon', href: '@/assets/images/favicon.svg' },
   
       ],
       script: [
@@ -25,6 +25,8 @@ export default defineNuxtConfig({
   },
  
   target: 'static',
+  fallback: true,
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -39,13 +41,6 @@ export default defineNuxtConfig({
   modules: [
       '@unocss/nuxt',
     ],
-
-    runtimeConfig: {
- 
-      public: {
-        STRAPI_URL: process.env.STRAPI_URL || 'http://localhost:1337',
-      },
-    },
 
     
   unocss: {
